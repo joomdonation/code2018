@@ -8,8 +8,7 @@
 	<copyright>Copyright (C) 2018 Ossolution Team</copyright>
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 	<version>1.0.0</version>
-	<description>A sample component used to show you how to use develop build a Joomla component using MVC programming pattern</description>
-	<scriptfile>install.code.php</scriptfile>	
+	<description>A sample component used to show you how to use develop build a Joomla component using MVC programming pattern</description>	
 	<administration>
 		<menu>Code</menu>		
 		<files folder="admin">			
