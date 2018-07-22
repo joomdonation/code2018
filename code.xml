@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.5.0" method="upgrade">
+	<name>Code</name>
+	<creationDate>22.07.2018</creationDate>
+	<author>Tuan Pham Ngoc</author>
+	<authorEmail>tuanpn@joomdonation.com</authorEmail>
+	<authorUrl>https://www.joomdonation.com</authorUrl>
+	<copyright>Copyright (C) 2018 Ossolution Team</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0.0</version>
+	<description>A sample component used to show you how to develop a Joomla component using MVC programming pattern.</description>
+	<administration>
+		<menu>Code</menu>		
+		<files folder="admin">			
+			<filename>code.php</filename>
+			<filename>controller.php</filename>
+			<folder>controllers</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">languages/en-GB/en-GB.com_code.ini</language>
+			<language tag="en-GB">languages/en-GB/en-GB.com_code.sys.ini</language>
+		</languages>
+	</administration>
+</extension>
