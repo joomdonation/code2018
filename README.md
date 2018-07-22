@@ -72,3 +72,42 @@ $model = $this->getModel('Item', 'CodeModel', ['ignore_request' => true]);
 ```
 Mặc đinh, khi một model object được tạo, Joomla sẽ call populateState method của model để thiết lập giá trị cho model states. Nếu chúng ta muốn bỏ qua việc thực hiện hàm đó, sử dụng lệnh phía trên (chú ý 'ignore_request' => true flag)
 
+3. Set redirect sử dụng setRedirect Method
+
+Method này thường được sử dụng khi chúng ta muốn redirect users đến 1 trang nào đó sau khi thực hiên 1 action. Ví dụ, sau khi lưu dữ liệu cho 1 item vào database, redirect users đến view items (hiển thị danh sách các items)
+
+1. Redirect và hiển thị success message
+
+```php
+$this->setRedirect(JRoute::_('index.php?option=com_code&view=items', false), JText::_('Item saved'));
+```
+
+2. Redirect và hiển thị warning message
+
+```php
+$this->setRedirect(JRoute::_('index.php?option=com_code&view=items', false), JText::_('Item saving error'), 'warning');
+```
+
+3. Redirect và hiển thị error message
+```php
+$this->setRedirect(JRoute::_('index.php?option=com_code&view=items', false), JText::_('Item saving error'), 'error');
+```
+
+4. Set message trước khi redirect sử dụng setMessage method
+
+Thông thường method này được sử dụng cùng với setRedirect method. Ví dụ
+
+```php
+$result = true;
+
+if ($result)
+{
+	$this->setMessage(JText::_('Item save success'));
+}
+else
+{
+	$this->setMessage(JText::_('Error saving item'));
+}
+
+$this->setRedirect(JRoute::_('index.php?option=com_code&view=items', false));
+```
