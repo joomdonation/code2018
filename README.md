@@ -111,3 +111,12 @@ else
 
 $this->setRedirect(JRoute::_('index.php?option=com_code&view=items', false));
 ```
+
+## Lưu ý
+- Tránh viết code thực hiện toàn bộ logic của 1 task trong controller method. Cách code tốt nhất là controller lấy sữ liệu đầu vào, create 1 model object, gọi một hàm của model, truyền dữ liệu vào cho hàm đó. Toàn bộ logic của action nên được thực hiện trong hàm của model
+- Nắm vững logic method nào của controller (hoặc sub-controller) sẽ được thực hiện dựa trên dữ liệu của biến task
+
+## Bài tập
+- Thêm 1 controller mới training
+- Them add method để hiển thị tổng của 2 sớ truyền vào từ URL (ví dụ http://localhost/joomla/administrator/index.php?option=com_code&task=training.add&a=100&b=40).
+- Them add_use_model method để hiển thị tổng của 2 sớ truyền vào từ URL (ví dụ http://localhost/joomla/administrator/index.php?option=com_code&task=training.add_use_model&a=100&b=40). Trong trường hợp này, cần tạo model class, method....
